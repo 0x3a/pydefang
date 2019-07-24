@@ -20,12 +20,12 @@ https://www.malicious.org/legit.exe
 
 You can also use it programmatically:
 ```python
-In [1]: import defang
+In [1]: from defang import defang, refang
 
-In [2]: defang.defang('https://www.malicious.org/legit.exe')
+In [2]: defang('https://www.malicious.org/legit.exe')
 Out[2]: 'hxxps[:]//www[.]malicious[.]org/legit[.]exe'
 
-In [3]: defang.refang('hxxps[:]//www[.]malicious[.]org/legit[.]exe')
+In [3]: refang('hxxps[:]//www[.]malicious[.]org/legit[.]exe')
 Out[3]: 'https://www.malicious.org/legit.exe'
 
 ```
